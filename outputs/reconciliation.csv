@@ -1,0 +1,9 @@
+source,count,detail
+"code inventory (features.macro, 24c5487)",107,41 FEATURE + 50 FIX + 16 RETIRE
+live feature RPC,101,64 enabled + 2 disabled
+VHS amendments info,103,15 deprecated
+on-ledger Amendments entry,64,enabled IDs
+VHS vote records,64,activation records
+code amendments absent from live set (all Supported::no),6,"BatchInnerSigs, DelegateV1_1, DynamicMPT, Batch, PermissionDelegation, InvariantsV1_1"
+VHS info amendments absent from code inventory,1,OrchardPrivacy (FFAB002FD32A4CFE1FA902D8A5F507B8B0E860716FC578E1E0BD6DB665BAABAA)
+VHS info amendments absent from live set,2,"Batch (894646DD5284E97DECFE6674A6D6152686791C4A95F8C132CCA9BAF9E5812FB6), OrchardPrivacy (FFAB002FD32A4CFE1FA902D8A5F507B8B0E860716FC578E1E0BD6DB665BAABAA)"
