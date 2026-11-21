@@ -1,0 +1,29 @@
+COLLECTOR: live run, stamp 20261121T211420Z
+COLLECTOR: endpoints VL=https://postfiat.org/testnet_vl.json RPC=https://rpc.testnet.postfiat.org VHS=https://vhs.testnet.postfiat.org
+FETCH testnet_vl: HTTP 200, 14781 bytes, SHA-256 5d4f5a18a18fead4105e5dc00cf7e11a71b9be4bc140357d1b4ea12116df59e7 -> 20261121T211420Z_testnet_vl.json
+FETCH testnet_vl: sequence 30, validators 25, effective 2026-11-17T20:10:08+00:00, expiration 2028-03-31T16:14:53+00:00
+VL-COMPARE: live SHA-256 5d4f5a18a18fead4105e5dc00cf7e11a71b9be4bc140357d1b4ea12116df59e7
+VL-COMPARE: reference SHA-256 5d4f5a18a18fead4105e5dc00cf7e11a71b9be4bc140357d1b4ea12116df59e7 (14781 bytes)
+VL-COMPARE: IDENTICAL
+FETCH rpc_server_info: HTTP 200, 1170 bytes, SHA-256 32e0f040da9608c7471dd98b746daa16f99465e29afa36f9a7d9296cdc8e599d -> 20261121T211420Z_rpc_server_info.json
+FETCH rpc_server_info: build 1.0.9, network_id 2025, validated ledger 8251750, validation_quorum 16, peers 21
+FETCH rpc_feature: HTTP 200, 12817 bytes, SHA-256 70585f308ab55dfdc84093e95a21c3859099dcbf1c5b04f1f00cea3a6785984f -> 20261121T211420Z_rpc_feature.json
+FETCH rpc_feature: 101 known, 64 enabled, 37 disabled, 0 carry a majority/vetoed field
+FETCH rpc_ledger_validated: HTTP 200, 761 bytes, SHA-256 5de1de665a83a438cac3a4baba811581adc48b0e59d6dca2e314bb71b41b0150 -> 20261121T211420Z_rpc_ledger_validated.json
+FETCH rpc_ledger_validated: ledger_index 8251750, close_time_iso 2026-11-21T21:14:21Z, hash 4775C3D33BF4D16232CAA11F2F2C50BD2EB3A072244E3519FE10EBD20390D2CD
+FETCH rpc_ledger_entry_amendments: HTTP 200, 4658 bytes, SHA-256 4e6813aabd83e339578f4d325fa9bbf41dbdf7f359f6787e862c9cf5a655de38 -> 20261121T211420Z_rpc_ledger_entry_amendments.json
+FETCH rpc_ledger_entry_amendments: 64 amendment IDs in the Amendments entry, ledger 8251751
+FETCH rpc_ledger_entry_negativeunl: HTTP 200, 760 bytes, SHA-256 e718cbcdd7add1dc02a63b3c92e4b66ff638f9dad6d2ff47fe62fab1f84cce96 -> 20261121T211420Z_rpc_ledger_entry_negativeunl.json
+FETCH rpc_ledger_entry_negativeunl: 2 disabled validator(s), ValidatorToDisable none pending, ledger 8251751
+FETCH vhs_root: HTTP 200, 2690 bytes, SHA-256 0f61e791be3d0147af69cbe50f573c2794b01d8b842f7f2985785f462d94a188 -> 20261121T211420Z_vhs_root.json
+FETCH vhs_validators_test: HTTP 200, 51431 bytes, SHA-256 3cb33893ec9c344c481e947963653aedb65ae1a7ec40c2b282bdc5fb1167b292 -> 20261121T211420Z_vhs_validators_test.json
+FETCH vhs_validators_test: 66 validators, 25 with unl "rpc", 55 domain_verified
+FETCH vhs_amendments_vote_test: HTTP 200, 17549 bytes, SHA-256 b93ef492b7737928b165823d78603ed2077b189514c189be851f6c1ca721427a -> 20261121T211420Z_vhs_amendments_vote_test.json
+FETCH vhs_amendments_vote_test: 64 activation records, distinct dates ['2026-02-09T14:31:12.000Z'], distinct ledger_index [86785], items with voted/eta fields 0
+FETCH vhs_amendments_info: HTTP 200, 14554 bytes, SHA-256 f4e9d57b540a27301a506af2a383d23715f3db19de11493f1ba5137fced73021 -> 20261121T211420Z_vhs_amendments_info.json
+FETCH vhs_amendments_info: 103 known amendments, 15 deprecated
+FETCH vhs_validator_reports: HTTP 200, 12927 bytes, SHA-256 6739fda7177a6c5e9744ecf9823e35d12e7724952974381daf53ef7b365bd982 -> 20261121T211420Z_vhs_validator_reports.json
+FETCH vhs_validator_reports: 66 daily reports
+PROBE websocket ws.testnet.postfiat.org: HTTP 101 -- HTTP/1.1 101 Switching Protocols
+CHECK wayback VL captures: count 0 -- HTTP 200, archived_snapshots={}
+COLLECTOR VERDICT: PASS -- 11 files fetched, 0 core failures
