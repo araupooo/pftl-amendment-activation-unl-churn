@@ -1,0 +1,7 @@
+trusted_validations_N,post_fix_threshold_floor_67pct,post_fix_votes_needed_strict_gt,pre_fix_threshold_floor_204_256,pre_fix_votes_needed_gte
+1,1,2,1,1
+2,1,2,1,1
+3,2,3,2,2
+10,6,7,7,7
+16,10,11,12,12
+25,16,17,19,19
