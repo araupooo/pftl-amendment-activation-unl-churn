@@ -1,0 +1,37 @@
+PFTL amendment activation and UNL churn — fresh-copy reproduction run
+Date: 2026-11-22 ~04:20 WIB (2026-11-21 ~21:20 UTC)
+Method: cp -r pack /tmp/pftl-gov-fresh-live and /tmp/pftl-gov-fresh; rm -rf outputs in each copy.
+Live copy: bash scripts/run_all.sh (live fetch). Offline copy: PFTL_OFFLINE=1 bash scripts/run_all.sh (reuse newest committed snapshot set 20261121T211420Z).
+Python 3.12.3.
+
+=== LIVE repro ===
+=== run_all.sh ===
+python3: Python 3.12.3
+scripts: 2 python3 checks (see outputs/)
+--- running scripts/collect_snapshots.py -> outputs/collect_snapshots.log ---
+PASS collect_snapshots (see outputs/collect_snapshots.log)
+
+--- running scripts/generate_tables.py -> outputs/generate_tables.log ---
+PASS generate_tables (see outputs/generate_tables.log)
+
+RUN_ALL RESULT: ALL CHECKS PASSED (2/2 scripts)
+LIVE RUN EXIT=0
+live runtime 25s
+=== OFFLINE repro ===
+=== run_all.sh ===
+python3: Python 3.12.3
+scripts: 2 python3 checks (see outputs/)
+--- running scripts/collect_snapshots.py -> outputs/collect_snapshots.log ---
+PASS collect_snapshots (offline, see outputs/collect_snapshots.log)
+
+--- running scripts/generate_tables.py -> outputs/generate_tables.log ---
+PASS generate_tables (see outputs/generate_tables.log)
+
+RUN_ALL RESULT: ALL CHECKS PASSED (2/2 scripts)
+OFFLINE RUN EXIT=0
+offline runtime 0s
+
+=== comparison vs committed outputs ===
+Live copy: all 12 generated tables byte-identical to the committed outputs (no differing fields at all in this run, including the agreement scores).
+Offline copy: all 12 generated tables + generate_tables.log byte-identical to the committed outputs.
+Offline copy collect_snapshots.log differs from the committed (live) collector log only in the mode lines: committed log is a live fetch, offline log records 'offline reuse of snapshot set 20261121T211420Z'; its VL-COMPARE line is IDENTICAL in both.
